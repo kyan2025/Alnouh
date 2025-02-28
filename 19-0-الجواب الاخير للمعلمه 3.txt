@@ -1,0 +1,148 @@
+Commodum Copia - Frontend Ontwerp
+
+1. Navigatiestructuur
+
+De navigatiestructuur van de website is ontworpen om de belangrijkste pagina's voor de klant te bevatten:
+
+- Home-pagina: Bevat een introductie over de supermarkt en links naar de productpagina.
+- Producten-pagina: Toont een lijst van beschikbare producten met afbeeldingen en een korte beschrijving.
+- Toekomstige pagina's: Extra functionaliteiten zoals een winkelwagentje en een betalingspagina zullen in een latere versie worden toegevoegd.
+
+Voorbeeld van de navigatiestructuur:
+Code:
+----------
+```html
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="producten.html">Producten</a></li>
+        </ul>
+    </nav>
+</header>
+----------
+
+2. Datastructuur
+
+Er moet een datastructuur worden gepresenteerd voor het opslaan van productinformatie en bestellingen.
+
+Voorbeeld datastructuur voor producten:
+Code:
+----------
+{
+    "product_id": 1,
+    "naam": "Product 1",
+    "prijs": "19.99",
+    "beschrijving": "Beschrijving van product 1",
+    "afbeelding": "product1.jpg"
+}
+----------
+Voorbeeld datastructuur voor bestellingen:
+Code:
+----------
+{
+    "order_id": 1234,
+    "klant_id": 5678,
+    "producten": [
+        { "product_id": 1, "aantal": 2 },
+        { "product_id": 3, "aantal": 1 }
+    ],
+    "totaal_bedrag": 59.97,
+    "status": "Bezig met verwerken"
+}
+----------
+
+3. Integratie met het Huidige Systeem
+
+In een toekomstige versie zal de website verbinding maken met het bestaande ICT-systeem van de klant. Dit omvat de synchronisatie van productinformatie, bestellingen en betalingen via een API.
+
+Voorbeeld van een API-verzoek voor betalingen:
+Code:
+----------
+{
+    "api_url": "https://api.commerce.com/payment",
+    "method": "POST",
+    "data": {
+        "order_id": 1234,
+        "payment_status": "completed",
+        "transaction_id": "abcd1234"
+    }
+}
+----------
+
+4. Kleurschema
+
+Het ontwerp gebruikt een eenvoudig en aantrekkelijk kleurschema dat past bij de merkidentiteit van Commodum Copia.
+
+- Achtergrond:** #f4f4f4 (lichtgrijs) voor een schone en leesbare interface.
+- Header en footer:** #333 (donkergrijs) voor contrast en duidelijkheid.
+- Knoppen en links:** #4CAF50 (groen) voor een frisse en herkenbare uitstraling.
+- Tekst:** #333 (donkergrijs) voor optimale leesbaarheid.
+
+Voorbeeld van CSS voor het kleurschema:
+Code:
+----------
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+nav a {
+    color: #4CAF50;
+}
+
+.product {
+    background-color: white;
+    color: #333;
+}
+----------
+
+5. README.md (Projectdocumentatie)
+Code:
+----------
+# Commodum Copia Frontend
+
+## Inhoudsopgave
+1. [Introductie](#introductie)
+2. [Bestandstructuur](#bestandstructuur)
+3. [Technologieën](#technologieën)
+4. [Installatie](#installatie)
+5. [Integratie met het Huidige Systeem]
+(#integratie-met-het-huidige-systeem)
+
+## Introductie
+Dit is de eerste versie van de Commodum Copia-website. De website toont producten en biedt een basisstructuur die gemakkelijk kan worden goedgekeurd door de klant.
+
+## Bestandstructuur
+- `index.html`: De hoofdpagina van de website.
+- `producten.html`: De pagina waarop de producten worden weergegeven.
+- `style.css`: De stijlen voor de website.
+- `script.js`: JavaScript voor interactiviteit.
+
+## Technologieën
+- HTML
+- CSS
+- JavaScript
+
+## Installatie
+1. Download de bestanden.
+2. Open `index.html` in een webbrowser.
+
+## Integratie met het Huidige Systeem
+De nieuwe website zal in de toekomst worden geïntegreerd met het huidige systeem via API's voor productinformatie, bestellingen en betalingen.
+----------
+
+6. Conclusie en Verbeteringen
+
+- Momenteel geïmplementeerd: Basis frontend met navigatie, productweergave en gestandaardiseerde styling.
+- Toekomstige verbeteringen:
+  - Implementatie van een winkelwagentje.
+  - Integratie van een back-end systeem.
+  - Uitbreiding van de API voor betalingsverwerking.
+
+===================================
